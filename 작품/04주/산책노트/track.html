@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>산책 노트</title>
+<meta name="description" content="걷다가 멈춰 선 순간들을 넘겨 봅니다.">
+<meta property="og:title" content="산책 노트">
+<meta property="og:description" content="걷다가 멈춰 선 순간들을 넘겨 봅니다.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="assets/lg/path-01.jpg">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="ph.css">
+<style>
+  .tr-cue-ann { position: relative; }
+  .tr-night-ann { position: absolute; top: -3.4rem; left: 14rem; }
+  .tr-night-x { position: absolute; top: 3.2rem; left: 8rem; width: 10.6rem; rotate: 28deg; }
+  .tr-portrait-num { align-self: flex-end; }
+  .tr-foot-avail { position: absolute; bottom: 92%; left: 50%; margin-left: 1rem; }
+  @media (max-width: 768px) {
+    .tr-night-ann { left: 2rem; top: -4rem; }
+    .tr-night-x { display: none; }
+    .tr-foot-avail { margin-left: 0; translate: -50% 0; }
+  }
+  @media (min-width: 769px) {
+    .ph-night .ph-stair > * { padding-left: 29.8rem !important; }
+    .ph-night-ex .ph-stair > * { padding-left: 15.3rem !important; }
+  }
+  .ph-night .ph-stair > :first-child { margin-bottom: .6rem; }
+</style>
+</head>
+<body>
+
+<div class="ph-progress" aria-hidden="true"><i></i></div>
+<header class="ph-bar ph-body">
+  <div class="ph-bar-l">
+    <a href="index.html"><svg class="ph-tri" viewBox="0 0 10 10" aria-hidden="true"><path d="M0 0 10 5 0 10z"/></svg><span data-c="topbar.brand">Walking Notes</span></a>
+    <span class="ph-hide-m" data-f="railTitle">A record of slow walks · 01</span>
+  </div>
+  <div class="ph-bar-r">
+    <button class="ph-bar-menu" type="button" data-menu-toggle aria-expanded="false" aria-controls="ph-menu">Menu</button>
+  </div>
+</header>
+
+<div class="ph-view">
+<main class="ph-main">
+
+  <!-- ① 히어로: 제목 대각 마스크 → 표지 clip 리빌 → 스크롤하면 표지 안 사진이 늦게 따라온다 -->
+  <section class="ph-hero">
+    <h1 class="ph-hero-title">
+      <span class="ph-title ph-mask-diag" data-intro="0" data-smear="y"><span data-f="title">THE PATH</span><sup class="ph-sup" data-f="yearSup">(<span data-f="year"></span>)</sup></span>
+    </h1>
+    <div class="ph-cover" data-reveal="clip" data-intro="260" data-parallax><img data-f="cover" src="assets/lg/path-01.jpg" alt=""></div>
+    <div class="ph-scroll-cue" data-intro="1300">
+      <span class="ph-hand ph-ann-text" data-c="track.ann.scroll">Keep scrolling</span>
+      <svg class="ph-draw" viewBox="0 0 10 36" aria-hidden="true"><path pathLength="1" style="--d:300ms" d="M5 1C4 12 6 22 5 34"/><path pathLength="1" style="--d:800ms" d="M1 27 5 35 9 27"/></svg>
+    </div>
+
+    <!-- ② 메타 | 본문 — 괘선이 좌→우로 그려지고 메타 줄이 계단식으로 올라온다 -->
+    <div class="ph-bo" data-io>
+      <i class="ph-rule"></i>
+      <div class="ph-meta">
+        <p class="ph-lead ph-line" style="--i:0"><span><span data-c="track.meta.0">Theme</span> — <span data-f="obj">Wherever it leads</span></span></p>
+        <p class="ph-lead ph-line" style="--i:1"><span><span data-c="track.meta.1">Frames</span> — <span data-f="count">5</span></span></p>
+        <p class="ph-lead ph-line" style="--i:2"><span><span data-c="track.meta.2">Shot</span> — <span data-f="shot">2026</span></span></p>
+        <p class="ph-lead ph-line" style="--i:3"><span><span data-c="track.meta.3">Series</span> — <span data-c="track.meta.series">Walking Notes</span></span></p>
+        <p class="ph-lead ph-line" style="--i:4"><span><span data-c="track.meta.4">Track</span> — <span data-f="no">01</span> / 03</span></p>
+      </div>
+      <div class="ph-inf ph-para">
+        <span class="ph-ann ph-hand ph-inf-ann"><span class="ph-ann-text" style="--d:500ms" data-c="track.ann.story">Behind the walk</span></span>
+        <p data-f="lines">정해진 목적지 없이 걷다 보면 발밑의 길이 스스로 방향을 정해 주는 것 같습니다. 나무 그늘이 짙어지는 곳, 길이 살짝 굽어지는 곳에서 자주 걸음을 멈추게 됩니다.</p>
+        <p data-f="story">포장된 길도, 흙길도 걸어 봤습니다. 어느 쪽이든 한 걸음씩 나아가는 감각은 비슷했어요. 사진에 담긴 길들은 대부분 사람이 드문 시간에 만난 것들입니다.</p>
+        <div class="ph-lnk">
+          <a class="ph-link-1 ph-link-2" data-f="backHref" href="index.html#path" data-c="track.link.0">Back to playlist</a>
+          <a class="ph-link-1 ph-link-2" data-f="nextHref" href="track.html?t=sky" data-c="track.link.1">Next track</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ③ 갤러리: clip 리빌(아래→위) + 사진 내부 패럴랙스 + 작은 사진은 더 빨리 흐른다(data-speed) -->
+  <section class="ph-ga" data-gallery>
+    <div class="ph-gr ph-gr-sl">
+      <div class="ph-img" data-reveal="clip" data-parallax data-speed="1.14"><img data-g="1" alt=""></div>
+      <div class="ph-img" data-reveal="clip" data-parallax><img data-g="2" alt=""></div>
+    </div>
+    <div class="ph-gr-cap ph-body ph-muted" data-io><span>02 — 03</span><span data-f="kr">길 위에서</span></div>
+    <div class="ph-gr ph-gr-in" style="margin-top:12rem">
+      <div class="ph-img" data-reveal="clip" data-parallax><img data-g="3" alt=""></div>
+    </div>
+  </section>
+
+  <!-- ④ 문장 스크럽: 단어가 스크롤 진행만큼 켜진다 -->
+  <section class="ph-state">
+    <p data-words data-f="statement">길이 굽어지는 곳에 다다르면 그 너머가 궁금해져 한 걸음 더 걷게 됩니다.</p>
+  </section>
+
+  <section class="ph-ga" style="padding-top:0">
+    <div class="ph-gr ph-gr-ls">
+      <div class="ph-img" data-reveal="clip" data-parallax><img data-g="4" alt=""></div>
+      <div class="ph-img" data-reveal="clip" data-parallax data-speed="1.18"><img data-g="5" alt=""></div>
+    </div>
+    <div class="ph-gr ph-gr-fw" style="margin-top:16rem">
+      <div class="ph-img" data-reveal="clip" data-parallax><img data-g="6" alt=""></div>
+    </div>
+  </section>
+
+  <!-- ⑤ 가로 핀: 세로 스크롤이 사진 줄을 옆으로 민다 · 속도만큼 기울고 · 카운터 스크램블 · 진행선 -->
+  <section class="ph-pin ph-h" data-pin>
+    <div class="ph-pin-inner">
+      <div class="ph-h-head">
+        <h2 class="ph-lead"><span data-c="track.pin.title">Contact Sheet</span><sup class="ph-sup" style="margin-left:.4rem">(<span data-f="count2">5</span>)</sup></h2>
+        <span class="ph-body" data-pin-count>01 / 05</span>
+      </div>
+      <div class="ph-h-track" data-pin-track></div>
+    </div>
+  </section>
+
+  <!-- ⑥ 나이트: 섹션 중심이 화면 중앙을 지나는 동안 바탕이 먹색으로 뒤집힌다 -->
+  <section class="ph-night" data-night>
+    <div style="position:relative" data-io>
+      <span class="ph-ann ph-hand tr-night-ann"><span class="ph-ann-text" style="--d:600ms" data-c="night.a.ann">What I keep</span></span>
+      <svg class="ph-ann ph-draw tr-night-x" viewBox="0 0 106 40" aria-hidden="true"><path pathLength="1" style="--d:900ms" d="M2 4C30 8 62 20 96 34"/><path pathLength="1" style="--d:1400ms" d="M84 36 98 35 92 22"/></svg>
+      <div class="ph-stair">
+        <span class="ph-lead ph-line" style="--i:0"><span data-c="night.a.label">(What I Look For)</span></span>
+        <span class="ph-head ph-line" style="--i:1"><span data-c="night.a.head.0">NOTICE WHAT'S</span></span>
+        <span class="ph-head ph-line" style="--i:2"><span data-c="night.a.head.1">EASY TO</span></span>
+        <span class="ph-head ph-line" style="--i:3"><span data-c="night.a.head.2">WALK PAST</span></span>
+      </div>
+      <div class="ph-night-body ph-para">
+        <p data-c="night.a.body.0">특별할 것 없는 하루의 산책에서도, 잠깐 멈춰 서면 보이는 것들이 있습니다.</p>
+        <p data-c="night.a.body.1">빛이 스며드는 각도, 구름이 움직이는 속도, 손끝에 닿는 온도 같은 것들이요.</p>
+      </div>
+    </div>
+    <div class="ph-portrait">
+      <span class="ph-body tr-portrait-num">(<span data-f="no2">01</span>)</span>
+      <div class="ph-img" data-reveal="clip" data-parallax><img data-g="7" alt=""></div>
+      <span class="ph-body tr-portrait-num">(03)</span>
+    </div>
+    <div class="ph-night-ex" data-io>
+      <div class="ph-stair">
+        <span class="ph-lead ph-line" style="--i:0"><span data-c="night.b.label">(Still Walking)</span></span>
+        <span class="ph-head ph-line" style="--i:1"><span data-c="night.b.head.0">ONE STEP,</span></span>
+        <span class="ph-head ph-line" style="--i:2"><span data-c="night.b.head.1">THEN ANOTHER</span></span>
+      </div>
+      <div class="ph-night-body ph-para">
+        <p data-c="night.b.body">거창한 계획 없이 그저 걷다 보면, 카메라를 꺼내고 싶어지는 순간이 옵니다. 이 기록은 그 순간들을 이어 붙인 것입니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑨ 푸터: 거대 제목 + 낙서 타원이 스크롤 진행만큼 그려진다 · 링크는 이웃이 비켜선다 -->
+  <footer class="ph-footer">
+    <div style="position:relative;text-align:center" data-io>
+      <span class="ph-ann ph-hand ph-hand-lg tr-foot-avail"><span class="ph-ann-text" data-c="footer.ann">End of reel</span></span>
+      <a class="ph-footer-git" href="index.html">
+        <span class="ph-title" data-smear="y" style="white-space:nowrap" data-c="footer.title">WALKING NOTES</span>
+        <svg class="ph-draw" data-scrub data-from=".95" data-to=".4" viewBox="0 0 900 200" preserveAspectRatio="none" style="top:-22%;left:-8%;width:116%;height:150%" aria-hidden="true"><path pathLength="1" d="M640 30C470 0 150 20 60 90-40 170 160 250 470 244 760 238 900 180 860 100 830 40 700 18 560 22"/></svg>
+      </a>
+    </div>
+    <p class="ph-footer-ti ph-para" data-reveal="fade" data-c="footer.line">오늘도 어디론가 걷고, 고개를 들어 하늘을 보고, 마음에 드는 것을 손에 쥐어 봅니다.</p>
+    <div class="ph-footer-bo ph-body" style="display:flex;justify-content:flex-end">
+      <div><a class="ph-link-2" href="index.html" data-c="footer.link.3">Walking Notes</a></div>
+    </div>
+  </footer>
+</main>
+</div>
+
+<div class="ph-menu" id="ph-menu" aria-hidden="true">
+  <ul>
+    <li><a class="ph-menu-item ph-title" href="track.html?t=path"><sup>(01)</sup><span class="ph-line" style="--i:0"><span data-c="menu.0">The Path</span></span><svg class="ph-draw" viewBox="0 0 240 16" aria-hidden="true"><path pathLength="1" d="M2 10C40 4 80 14 120 8 160 2 200 12 238 6"/></svg></a></li>
+    <li><a class="ph-menu-item ph-title" href="track.html?t=sky"><sup>(02)</sup><span class="ph-line" style="--i:1"><span data-c="menu.1">Open Sky</span></span><svg class="ph-draw" viewBox="0 0 240 16" aria-hidden="true"><path pathLength="1" d="M2 8C50 12 90 3 130 9 170 14 206 4 238 9"/></svg></a></li>
+    <li><a class="ph-menu-item ph-title" href="track.html?t=hand"><sup>(03)</sup><span class="ph-line" style="--i:2"><span data-c="menu.2">In Hand</span></span><svg class="ph-draw" viewBox="0 0 240 16" aria-hidden="true"><path pathLength="1" d="M2 11C44 5 92 13 128 7 168 1 204 13 238 7"/></svg></a></li>
+  </ul>
+  <div class="ph-menu-foot ph-body" style="grid-template-columns:1fr 1fr">
+    <a class="ph-link-2" href="index.html" data-c="menu.foot.1">All tracks</a>
+    <button class="ph-link-2" type="button" data-menu-toggle data-c="menu.foot.2">Close</button>
+  </div>
+</div>
+
+<script src="playlist-data.js"></script>
+<script>
+/* 템플릿 채우기 — ph-motion.js 부팅 전에 동기로 실행해야 캐시 좌표가 맞는다 */
+(() => {
+  const D = window.PH_PLAYLIST, C = window.PH_COPY;
+  const id = new URLSearchParams(location.search).get("t") || "path";
+  const ti = Math.max(0, D.findIndex((t) => t.id === id));
+  const t = D[ti], nx = D[(ti + 1) % D.length], pad = (n) => String(n).padStart(2, "0");
+  const f = (k) => document.querySelectorAll(`[data-f="${k}"]`);
+  const set = (k, v) => f(k).forEach((el) => (el.textContent = v));
+  document.title = `${t.kr} · ${C["meta.track.title"]}`;
+  set("title", t.title); set("year", t.year);
+  if (!t.year) document.querySelectorAll('[data-f="yearSup"]').forEach((el) => el.remove());
+  set("obj", t.obj); set("count", t.items.length); set("count2", t.items.length);
+  set("shot", t.shot); set("no", pad(ti + 1)); set("no2", pad(ti + 1)); set("kr", t.kr);
+  set("lines", t.lines.join(" ")); set("story", t.story.join(" ")); set("statement", t.statement || t.lines.join(" "));
+  set("railTitle", `${C["topbar.tagline"]} · ${pad(ti + 1)}`);
+  f("backHref").forEach((a) => (a.href = `index.html#${t.id}`));
+  f("nextHref").forEach((a) => (a.href = nx.href));
+  const cover = t.items.find((x) => x.lg.includes(t.cover + ".")) || t.items[0];
+  f("cover").forEach((im) => { im.src = cover.lg; im.alt = cover.alt; });
+  const rest = t.items.filter((x) => x !== cover);
+  document.querySelectorAll("[data-g]").forEach((im) => {
+    const x = rest[(Number(im.dataset.g) - 1) % rest.length];
+    im.src = x.lg; im.alt = x.alt; im.loading = "lazy"; im.decoding = "async";
+  });
+  /* DOM API 로 만든다 — 속성에 템플릿 문자열을 두면 정적 자산 검사가 링크로 오인한다 */
+  const h = (tag, attrs = {}, kids = []) => {
+    const el = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs)) k === "text" ? (el.textContent = v) : el.setAttribute(k, v);
+    kids.forEach((c) => el.append(c));
+    return el;
+  };
+  const track = document.querySelector("[data-pin-track]");
+  t.items.forEach((x, i) => {
+    const im = h("img", { alt: x.alt, loading: "lazy", decoding: "async" }); im.src = x.sm;
+    const hi = new Image(); hi.onload = () => (im.src = hi.src); hi.src = x.lg;
+    const box = h("div", { class: "ph-img", style: "--ar:" + (x.w / x.h).toFixed(4) }, [im]);
+    const cap = h("figcaption", { class: "ph-body" }, [h("span", { text: pad(i + 1) })]);
+    track.append(h("figure", { class: "ph-h-card", style: "margin:0" }, [box, cap]));
+  });
+})();
+</script>
+<script src="ph-motion.js"></script>
+</body>
+</html>
